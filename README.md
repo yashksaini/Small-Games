@@ -1,5 +1,5 @@
 # Small-Games
-It contains all the games that can be made with javascript.
+It contains the games that can be made with javascript.
 
 
 **1. IPL 2021**
