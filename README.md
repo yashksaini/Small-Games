@@ -1,2 +1,2 @@
 # Small-Games
-It contains all the games that I have created.
+It contains all the games that can be made with javascript.
