@@ -20,7 +20,7 @@ https://spin-dice.netlify.app/
 
 **5. Tic Tac Toe**
 Project created using **HTML,CSS,JS**
-https://tictactoeyks.netlify.app/
+https://tic-tac-toe-yks.netlify.app/
 
 **6. Ludo Game**
 Project created using **HTML,CSS,JS**
