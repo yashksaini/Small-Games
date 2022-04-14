@@ -2,6 +2,9 @@
 It contains all the games that can be made with javascript.
 
 
+**1. IPL 2021**
+Project created using **HTML,CSS,JS,Jquery**
+
 **2. Bingo Vs Computer**
 Project created using **HTML,CSS,JS**
 
