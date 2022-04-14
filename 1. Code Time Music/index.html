@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="music.css">
+    <!-- Icons Link -->
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Animate.style Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <title>Code Time Music</title>
+    <!-- Head Icon -->
+    <link rel="icon" type="image/x-icon" href="Images/icon_img.JPG">
+</head>
+
+<body>
+    <div class="loadpage" id="loadscreen">
+        <div style="height: 100vh;width: 100%;" class="d-flex justify-content-center align-items-center">
+            <div style="text-align: center;">
+                <div class="d-flex justify-content-center align-items-center ">
+                    <i class="fas fa-headphones-alt load_icon wow zoomIn" data-wow-delay="1s"></i>
+                    <i class="fas fa-laptop-code load_icon wow zoomIn" data-wow-delay="1s"></i>
+                </div>
+                <h1 class="wow fadeInDown" data-wow-delay="1s"><b>Code</b><i>Time</i> <b><i>Music</i></b></h1>
+                <div class="d-flex justify-content-center align-items-center wow zoomIn" style="height: 100px;overflow: hidden;">
+                    <div id="c2" class="load_bar"></div>
+                    <div id="c3" class="load_bar"></div>
+                    <div id="c4" class="load_bar"></div>
+                    <div id="c1" class="load_bar"></div>
+                </div>
+                <div class="load_icon1 wow fadeInLeft" data-wow-delay="1.6s" onclick="start()">
+                    <i class="fas fa-play"></i>
+                    <h1><b>START</b></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Music_Player" style="display: none;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 player_back wow zoomIn">
+                    <div class="song_ground">
+                        <audio src="songs/1.mp3" id="current_audio" style="display: none;"></audio>
+                        <div class="song_img">
+                            <div class="now_playing_details wow fadeInDown" data-wow-delay="0.2s">
+                                <h4 class="wow fadeInUp" data-wow-delay="0.8s"><i>Now Playing . . .</i></h4>
+                                <div id="current_detail">
+                                    <h4 class="wow fadeInUp" data-wow-delay="1.4s">Bach Aria Variata</h4>
+                                    <span class="badge bg-light wow fadeInUp" data-wow-delay="2s">1</span>
+                                    <p class="wow fadeInUp" data-wow-delay="2.6s">02:20</p>
+                                </div>
+                            </div>
+                            <div class="justify-content-center align-items-center track_s">
+                                <i class="fas fa-step-backward wow fadeInRight" id="backward" onclick="next(1)" data-wow-delay="4s"></i>
+                                <i class="fas fa-play-circle play_icon wow zoomIn" onclick="play(1)" id="play_song" data-wow-delay="3.5s"></i>
+                                <i class="fas fa-pause-circle play_icon" onclick="play(2)" id="pause_song" style="display: none;"></i>
+                                <i class="fas fa-step-forward wow fadeInRight" id="forward" onclick="next(2)" data-wow-delay="3s"></i>
+                            </div>
+                            <input type="range" id="song_length" class=" wow fadeInDown" data-wow-delay="4.5s" min="0" step="0.1" value="0">
+                            <div class="current_time wow fadeInRight" data-wow-delay="5s">
+                                <span>
+                                    <i class="fas fa-volume-mute speaker" id="mute_btn" style="display: none" onclick="mute_song(2)"></i>
+                                    <i class="fas fa-volume-up speaker" id="vol_btn" onclick="mute_song(1)"></i>
+                                </span>
+                                <span id="time_laps"></span> / <span id="total_time"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4 songs_list">
+                    <div class="songs_ground wow fadeInUp" data-wow-delay="5.8s">
+                        <div class="list_in_songs list_odd wow fadeInUp " data-wow-delay="6.4s" onclick="change_song(1)" id="song1">
+                            <h4>Bach Aria Variata</h4>
+                            <span class="badge bg-light">1</span>
+                            <p>02:20</p>
+                        </div>
+                        <div class="list_in_songs list_even wow fadeInUp " data-wow-delay="6.8s" onclick="change_song(2)" id="song2">
+                            <h4>Mozart Sonata</h4>
+                            <span class="badge bg-light">2</span>
+                            <p>06:16</p>
+                        </div>
+                        <div class="list_in_songs list_odd wow fadeInUp " data-wow-delay="7.2s" onclick="change_song(3)" id="song3">
+                            <h4>Pathetique</h4>
+                            <span class="badge bg-light">3</span>
+                            <p>06:20</p>
+                        </div>
+                        <div class="list_in_songs list_even wow fadeInUp " data-wow-delay="7.6s" onclick="change_song(4)" id="song4">
+                            <h4>Schuberts</h4>
+                            <span class="badge bg-light">4</span>
+                            <p>08:02</p>
+                        </div>
+                        <div class="list_in_songs list_odd wow fadeInUp " data-wow-delay="8s" onclick="change_song(5)" id="song5">
+                            <h4>Gluck Gluck Balleta</h4>
+                            <span class="badge bg-light">5</span>
+                            <p>08:20</p>
+                        </div>
+                        <div class="list_in_songs list_even wow fadeInUp " data-wow-delay="8.4s" onclick="change_song(6)" id="song6">
+                            <h4>Serial Killer</h4>
+                            <span class="badge bg-light">6</span>
+                            <p>02:36</p>
+                        </div>
+                        <div class="list_in_songs list_odd" onclick="change_song(7)" id="song7">
+                            <h4>Time</h4>
+                            <span class="badge bg-light">7</span>
+                            <p>03:02</p>
+                        </div>
+                        <div class="list_in_songs list_even" onclick="change_song(8)" id="song8">
+                            <h4>Responsibility</h4>
+                            <span class="badge bg-light">8</span>
+                            <p>02:59</p>
+                        </div>
+                        <div class="list_in_songs list_odd" onclick="change_song(9)" id="song9">
+                            <h4>Old Key</h4>
+                            <span class="badge bg-light">9</span>
+                            <p>02:37</p>
+                        </div>
+                        <div class="list_in_songs list_even" onclick="change_song(10)" id="song10">
+                            <h4>Brotherhood</h4>
+                            <span class="badge bg-light">10</span>
+                            <p>02:01</p>
+                        </div>
+                        <div class="list_in_songs list_odd" onclick="change_song(11)" id="song11">
+                            <h4>Dramatic Ending</h4>
+                            <span class="badge bg-light">11</span>
+                            <p>03:49</p>
+                        </div>
+                        <div class="list_in_songs list_even" onclick="change_song(12)" id="song12">
+                            <h4>The Bards Tale</h4>
+                            <span class="badge bg-light">12</span>
+                            <p>02:38</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center;padding: 5px;font-size: 12px;">Designed and Developed by Yash Kumar Saini <br> © 2021 All Rights Reserved.</p>
+            <!-- Optional JavaScript; choose one of the two! -->
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+            <!-- Music JS -->
+            <script type="text/javascript" src="music.js"> </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script>
+            new WOW().init();
+            </script>
+</body>
+
+</html>

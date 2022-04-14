@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <title>Kill Virus Game</title>
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="screen1" id="screen1">
+        <h1>
+          <span style="color: red; margin-right: 10px">Kill</span> Virus Game
+        </h1>
+        <button class="start-btn" onclick="start()" id="start">Start</button>
+      </div>
+      <div class="screen2" id="screen2">
+        <div class="scoreboard">
+          <div class="left-score">Score <span id="score">0</span></div>
+          <div class="right-score">Level <span id="level">1</span></div>
+        </div>
+        <div class="board">
+          <div class="move_box">
+            <div class="each_row">
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+            </div>
+            <div class="each_row">
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+            </div>
+            <div class="each_row">
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+            </div>
+            <div class="each_row">
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+            </div>
+            <div class="each_row">
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+            </div>
+            <div class="each_row">
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen3" id="screen3">
+        <h1><b>Game Over</b></h1>
+        <p id="message"></p>
+        <p id="scoreshow">Your Score is <span id="final"></span></p>
+        <button class="start-btn" onclick="window.location.reload();">
+          Play Again
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

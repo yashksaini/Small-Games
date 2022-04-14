@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/icon.png" />
+    <!-- Animate.style Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <div class="background center">
+      <div class="start_box" id="start_box">
+        <h1>Rock Paper Scissors</h1>
+        <button id="start_btn">START</button>
+        <p>Yash Kumar Saini<br />© 2022 All Rights Reserved.</p>
+      </div>
+      <div id="game" class="start_box hide">
+        <h1 class="wow tada" data-wow-delay="0.5s">Rock Paper Scissors</h1>
+        <div class="scoreboard center">
+          <div class="scorebox wow fadeInDown" data-wow-delay="1s">
+            <div class="center score">
+              <p>
+                You <br />
+                <span id="player_score">0</span>
+              </p>
+            </div>
+            <div class="dots"></div>
+            <div class="center score">
+              <p>
+                Bot <br />
+                <span id="computer_score">0</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="play_ground center wow fadeInDown" data-wow-delay="2s">
+          <div class="play_btn" id="you_box">
+            <img src="images/rock.png" alt="" />
+            <div>You</div>
+          </div>
+          <div class="play_btn center" id="status">
+            <p>Choose</p>
+          </div>
+          <div class="play_btn" id="bot_box">
+            <img src="images/rock.png" alt="" />
+            <div>Bot</div>
+          </div>
+        </div>
+        <div class="select_box center wow fadeInDown" data-wow-delay="3s">
+          <div class="select_btn">
+            <img src="images/rock.png" alt="" />
+            <div>Rock</div>
+          </div>
+          <div class="select_btn">
+            <img src="images/paper.png" alt="" />
+            <div>Paper</div>
+          </div>
+          <div class="select_btn">
+            <img src="images/scissor.png" alt="" />
+            <div>Scissors</div>
+          </div>
+        </div>
+      </div>
+      <div class="start_box final_result hide" id="result">
+        <h1 id="show_result"></h1>
+        <button onclick="window.location.reload()">RESTART</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>

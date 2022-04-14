@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Head Icon -->
+    <link rel="icon" type="image/x-icon" href="die.png">
+    <!-- Roll CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!-- Animation Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Spin Dice</title>
+</head>
+
+<body>
+    <div class="container mb-2 mt-3">
+        <div class="row">
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <h1 style="text-align: center;font-weight: 900;">SPIN DICE</h1>
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <h3 class="rule" data-bs-toggle="modal" data-bs-target="#exampleModal">Rules <i class="fas fa-question-circle"></i></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 p-1">
+                <div class="players" id="player1">
+                    <h1>Player 1 <span id="p1_current"><i class="fas fa-dice"></i></span></h1>
+                    <h2>Score : <span id="player1_score">0</span></h2>
+                    <h2>Saved : <span id="p1_saved">0</span></h2>
+                </div>
+            </div>
+            <div class="col-6 p-1">
+                <div class="players" id="player2" style="filter: grayscale(100%);">
+                    <h1>Player 2 <span id="p2_current" style="display: none;"><i class="fas fa-dice"></i></h1>
+                    <h2>Score :<span id="player2_score">0</span></h2>
+                    <h2>Saved : <span id="p2_saved">0</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 p-1 d-flex justify-content-center align-items-center">
+                <div class="dice_box d-flex justify-content-center align-items-center">
+                    <div>
+                        <h3 class="dice_inst">Player1 <br> Dice</h3>
+                        <button class="btn buttons" id="roll_btn1" onclick="roll()">Roll <br><i class="fas fa-dice-d6"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 p-1">
+                <div class="dice_box d-flex justify-content-center align-items-center" style="text-align: center;">
+                    <div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="dice_img animate__animated animate__zoomIn fas fa-dice-one" id="dice_icon1"></i>
+                            <i class="dice_img animate__animated animate__zoomIn fas fa-dice-one" id="dice_icon2" style="display: none;"></i>
+                        </div>
+                        <button class="btn buttons1" id="save_btn" onclick="saveState()">Save & Pass</button>
+                        <button class="btn buttons1" id="restart_btn" style="display: none;" onClick="window.location.reload();">Restart</button>
+                        <b>
+                            <h4 id="winner" class=" mt-4 animate__animated animate__zoomIn" style="display: none;font-weight: 700;"></h4>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 p-1 d-flex justify-content-center align-items-center">
+                <div class="dice_box d-flex justify-content-center align-items-center">
+                    <div>
+                        <h3 class="dice_inst">Player2 <br> Dice</h3>
+                        <button class="btn buttons" id="roll_btn2" disabled onclick="roll()">Roll <br><i class="fas fa-dice-d6"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Model For Rules -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rules for game.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">This is a two player game.</li>
+                        <li class="list-group-item">Who score 100 first will win the game.</li>
+                        <li class="list-group-item">Roll Buttons Active with the current players chance.</li>
+                        <li class="list-group-item">Start by clicking respective roll buttons.</li>
+                        <li class="list-group-item">Player 1 will start first.</li>
+                        <li class="list-group-item">If you got " 1 " on dice then the score reduced to the saved score.</li>
+                        <li class="list-group-item">Any player can save score anytime and pass chance to the other player.</li>
+                        <li class="list-group-item">Initial Saved Score is 0.</li>
+                        <li class="list-group-item">The numbers on the dice will added to the score.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onClick="window.location.reload();">Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="footer_text">Designed and Developed by Yash Kumar Saini<br>© 2021 All Rights Reserved.</p>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="roll.js"></script>
+    <!-- Sass CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.min.js" integrity="sha512-/F8YhC3n5OrM9ta9htMD620kH0paKnjDHCHcSvyWumxlqsnkS/XCpYExuMZuXE4K3GE9tDQFBqgXsmkjsjRbDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

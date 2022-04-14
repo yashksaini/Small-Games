@@ -1,0 +1,102 @@
+$width: 300px;
+$backgrounColor: #4c43d4;
+$border: white;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $backgrounColor;
+  font-family: "Spartan", sans-serif;
+}
+.backGround {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+.restart {
+  font-family: "Spartan", sans-serif;
+  width: 200px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 100px;
+  border-style: none;
+  margin-top: 15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.button {
+  background: none;
+
+  font-family: "Spartan", sans-serif;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.ticGround {
+  width: $width;
+  height: $width;
+  text-align: center;
+  h1 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+  }
+  p {
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+  }
+  .eachRow {
+    display: flex;
+    height: $width/3;
+    width: $width;
+    .button {
+      width: $width/3;
+      height: $width/3;
+      font-size: 10px;
+      border-style: none;
+      border-right: 2px $border solid;
+      border-bottom: 2px $border solid;
+      &:last-child {
+        border-right: none;
+      }
+    }
+    &:last-child {
+      .button {
+        border-bottom: none;
+      }
+    }
+  }
+}
+.win {
+  font-weight: 700 !important;
+  text-shadow: 1px 1px;
+  transition: all 1s;
+}
+.top_left {
+  width: $width/2;
+  height: $width/2;
+  background-color: #ffc72a;
+  position: fixed;
+  top: -$width/4;
+  left: -$width/4;
+  border-radius: 500px;
+  z-index: -1;
+}
+.bottom_right {
+  width: $width/2;
+  height: $width/2;
+  background-color: #12e177;
+  position: fixed;
+  right: -75px;
+  bottom: -75px;
+  border-radius: 500px;
+  z-index: -1;
+}
+.animate {
+  font-size: 40px !important;
+  transition: all 0.5s;
+}

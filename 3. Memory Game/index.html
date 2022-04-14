@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Memory Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="mainBox">
+      <div class="memoBox">
+        <div class="time"><h1 id="time"></h1></div>
+        <div class="eachRow">
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+        </div>
+        <div class="eachRow">
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+        </div>
+        <div class="eachRow">
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+        </div>
+        <div class="eachRow">
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+        </div>
+        <div class="eachRow">
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+          <button class="box rotate1"></button>
+        </div>
+        <div class="start" id="start_btn">
+          <div id="start">
+            <h1>Memory Game</h1>
+            <button onclick="start()">Start</button>
+          </div>
+          <div id="end" style="display: none">
+            <h1>Congratulations!</h1>
+            <h1>You Win</h1>
+            <button onClick="window.location.reload();">Restart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="footer_text">
+      Designed and Developed by Yash Kumar Saini<br />© 2021 All Rights
+      Reserved.
+    </p>
+
+    <script src="memory.js"></script>
+  </body>
+</html>

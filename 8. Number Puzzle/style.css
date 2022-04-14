@@ -1,0 +1,76 @@
+body,html{
+padding: 0px;
+margin: 0px;
+font-family: 'Poppins', sans-serif;
+}
+.background{
+   width: 100%;
+   min-height: 100vh;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url("images/background.jpg" );
+   background-position: center;
+   background-repeat: no-repeat;
+  background-size: cover;
+}
+.ground{
+   width: 240px;
+   height: 240px;
+   text-align: center;
+}
+.eachRow{
+   width: 240px;
+   height: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 12px;
+}
+.btn{
+   width: 80px;
+   height: 80px;
+   border: 1px solid #929292;
+   background-color: #FFFDFA;
+   font-size: 36px;
+   color: #474747 ;
+   border-radius: 10px;
+}
+.btn:hover{
+   cursor: pointer;
+   background-color: azure;
+}
+.head
+{
+   position:fixed;
+   top: 0px;
+   width: 300px;
+   left: 50%;
+   text-align: center;
+   margin-left: -150px;
+   font-size: 32px;
+   color: #1f1f1f;
+}
+.reset{
+   margin-top: 10px;
+   width: 200px;
+   border:none;
+   padding: 12px;
+   font-size: 25px;
+   background-color: #1f1f1f;
+   color: #FFFDFA;
+   border-radius: 500px;
+   transition: all 0.5s;
+}
+.reset:hover{
+   background-color: #FFFDFA;
+   border:1px solid #1f1f1f;
+   color: #1f1f1f;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+#steps{
+   font-size: 18px;
+   color:white;
+}

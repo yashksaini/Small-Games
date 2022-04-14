@@ -1,0 +1,367 @@
+body {
+    background-color: #F3F3F3;
+    font-family: 'Poppins', sans-serif;
+
+    background-image: linear-gradient(to right, #FFB8B8, #BCBEFC);
+}
+
+/* Loader Code  Start */
+.load_bar {
+    width: 10px;
+    border-radius: 15px;
+    height: 30px;
+    background-color: black;
+    margin-left: 20px;
+}
+
+.load_icon {
+    font-size: 80px;
+    padding: 20px;
+}
+
+.load_icon1 {
+    font-size: 80px;
+    text-align: center;
+}
+
+.load_icon1:hover {
+    transform: skewX(-10deg);
+    cursor: pointer;
+    color: #FF4444;
+    transition: transform 0.5s, color 1s;
+}
+
+
+/* Loader Code Ends */
+
+.player_back {
+    padding: 30px;
+    opacity: transparent;
+}
+
+.song_ground {
+    box-shadow: 0 5px 20px #E2E2E2;
+    border-radius: 15px;
+    background-color: #F9F9F9;
+    height: auto;
+    min-height: 510px;
+    width: 100%;
+    position: relative;
+}
+
+.songs_list {
+    padding: 30px 30px 30px 0px;
+}
+
+.songs_ground {
+    box-shadow: 0 5px 20px #E2E2E2;
+    border-radius: 15px;
+    background-color: #F9F9F9;
+    height: 580px;
+    width: 100%;
+    position: relative;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+/* width */
+.songs_ground::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.songs_ground::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+.songs_ground::-webkit-scrollbar-thumb {
+    background: #9496FF;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+.songs_ground::-webkit-scrollbar-thumb:hover {
+    background: #7678FF;
+}
+
+.song_img {
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.play_icon {
+    font-size: 100px;
+    color: #FF7C7C;
+    padding-bottom: 30px;
+}
+
+.play_icon:hover {
+    color: #FB3333;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+#forward {
+    color: #9496FF;
+    font-size: 100px;
+    padding-bottom: 30px;
+}
+
+#forward:hover {
+    color: #5154FF;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+#backward {
+    color: #9496FF;
+    font-size: 100px;
+    padding-bottom: 30px;
+
+}
+
+#backward:hover {
+    color: #5154FF;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+#song_length {
+    width: 80%;
+    height: 5px;
+    border-radius: 50px;
+    margin-top: 20px;
+    background: #9496FF;
+    -webkit-appearance: none;
+}
+
+#song_length::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background: #FF7C7C;
+    cursor: pointer;
+}
+
+.now_playing_details {
+    height: auto;
+    min-height: 200px;
+    box-shadow: 0 5px 20px #E2E2E2;
+    border-radius: 15px;
+    background-color: #F9F9F9;
+    color: white;
+    padding: 30px;
+    background-image: linear-gradient(to right, #9496FF, #FF7C7C);
+
+}
+
+.now_playing_details h4 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.now_playing_details span {
+    color: black;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 30px;
+}
+
+.now_playing_details p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.list_in_songs {
+    height: 100px;
+    box-shadow: 0 5px 20px #E2E2E2;
+    border-radius: 15px;
+    background-color: #F9F9F9;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.list_in_songs:hover {
+    cursor: pointer;
+    transform: skewY(-2deg);
+    transition: transform 0.5s;
+}
+
+
+.track_s {
+    margin-top: 40px;
+}
+
+.list_in_songs p {
+    padding-right: 5px;
+    text-align: right;
+    color: #fff;
+}
+
+.list_in_songs h4 {
+    text-align: center;
+    color: #fff;
+}
+
+.list_in_songs span {
+    padding: 5px;
+    color: black;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.current_time {
+    text-align: right;
+    padding-right: 80px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#total_time {
+    color: #5154FF;
+}
+
+#time_laps {
+    color: #FB3333;
+}
+
+.speaker {
+    padding-right: 20px;
+}
+
+.speaker:hover {
+    cursor: pointer;
+}
+
+.list_odd {
+    background-color: #9496FF;
+}
+
+.list_even {
+    background-color: #FF7C7C;
+}
+
+/* Responsive Start */
+@media only screen and (max-width: 768px) {
+    .player_back {
+        padding: 10px;
+    }
+
+    .song_img {
+        padding: 5px;
+    }
+
+    .now_playing_details {
+        padding: 5px;
+        min-height: auto;
+    }
+
+    .now_playing_details h4 {
+        font-size: 16px;
+    }
+
+    .now_playing_details span {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .now_playing_details p {
+        font-size: 12px;
+    }
+
+    .play_icon {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
+    #backward {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
+    #forward {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
+    .current_time {
+        text-align: right;
+        padding-right: 25px;
+        margin-top: 10px;
+        font-size: 16px;
+
+    }
+
+    .track_s {
+        margin-top: 10px;
+    }
+
+    .song_ground {
+        min-height: auto;
+    }
+
+    #song_length::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    .songs_list {
+        padding: 10px;
+    }
+
+    .songs_ground {
+        box-shadow: 0 5px 20px #E2E2E2;
+        border-radius: 15px;
+        background-color: #F9F9F9;
+        height: auto;
+        width: 100%;
+        position: relative;
+        padding: 10px;
+    }
+
+    /* width */
+    .songs_ground::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Track */
+    .songs_ground::-webkit-scrollbar-track {
+        display: none;
+    }
+
+    /* Handle */
+    .songs_ground::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+
+    /* Handle on hover */
+    .songs_ground::-webkit-scrollbar-thumb:hover {
+        display: none;
+    }
+
+    .list_in_songs {
+        height: auto;
+    }
+
+    .list_in_songs p {
+        font-size: 12px;
+    }
+
+    .list_in_songs h4 {
+        font-size: 16px;
+    }
+
+}

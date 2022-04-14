@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/dot.png" />
+    <title>Dots Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Animate.style Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+  </head>
+  <body>
+    <div class="background center">
+      <div class="start_box" id="start_box">
+        <h1>Dots Game</h1>
+        <button id="start_btn">START</button>
+        <p>Yash Kumar Saini<br />© 2022 All Rights Reserved.</p>
+      </div>
+      <div id="game" class="start_box hide">
+        <h1 class="wow tada" data-wow-delay="0.5s">Dots Game</h1>
+        <div class="current center">
+          <div
+            class="current_box center wow zoomIn"
+            id="player1"
+            data-wow-delay="2.5s"
+          ></div>
+          <div
+            class="current_box center wow zoomIn"
+            id="player2"
+            data-wow-delay="2.5s"
+          ></div>
+        </div>
+        <div id="dot_board"></div>
+      </div>
+      <div class="start_box final_result hide" id="result">
+        <h1 id="show_result"></h1>
+        <button onclick="window.location.reload()">RESTART</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>

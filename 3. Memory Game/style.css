@@ -1,0 +1,206 @@
+body {
+  background-color: #5065bd;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.mainBox {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+  background-color: #5065bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memoBox {
+  width: 452px;
+  height: 565px;
+  background-color: #5065bd;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.eachRow {
+  width: 452px;
+  height: 113px;
+  background-color: #5065bd;
+  display: flex;
+}
+
+.box {
+  width: 113px;
+  height: 113px;
+  font-size: 64.5714285714px;
+  border-radius: 10px;
+  background-color: beige;
+  border: solid #797979 1px;
+}
+.box:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.rotate1 {
+  transform: rotateY(180deg);
+  transition: all 0.5s;
+}
+
+.rotate2 {
+  transform: rotateY(-180deg);
+  transition: all 0.5s;
+}
+
+.remove {
+  transform: scale(0.001);
+  background-color: #5065bd;
+  transition: all 2s;
+}
+
+.start {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 452px;
+  height: 565px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: transparent;
+  border-radius: 10px;
+  background-color: royalblue;
+  opacity: 0.8;
+}
+.start h1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.start button {
+  opacity: 1 in !important;
+  font-size: 40px;
+  width: 200px;
+  height: 80px;
+  border-style: none;
+  border-radius: 80px;
+}
+.start button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
+}
+
+.time {
+  position: absolute;
+  top: -70px;
+  left: 40px;
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+.time h1 {
+  font-weight: 5;
+}
+
+.footer_text {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-weight: 10;
+}
+
+@media only screen and (max-width: 768px) {
+  .memoBox {
+    width: 300px;
+    height: 375px;
+  }
+
+  .eachRow {
+    width: 300px;
+    height: 75px;
+  }
+
+  .box {
+    width: 75px;
+    height: 75px;
+    font-size: 42.8571428571px;
+  }
+
+  .start {
+    width: 300px;
+    height: 375px;
+  }
+  .start h1 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .start button {
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+  }
+
+  .time {
+    top: -70px;
+    left: 40px;
+  }
+  .time h1 {
+    font-size: 20px;
+  }
+
+  .footer_text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .memoBox {
+    width: 260px;
+    height: 325px;
+  }
+
+  .eachRow {
+    width: 260px;
+    height: 65px;
+  }
+
+  .box {
+    width: 65px;
+    height: 65px;
+    font-size: 37.1428571429px;
+  }
+
+  .start {
+    width: 260px;
+    height: 325px;
+  }
+  .start h1 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .start button {
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+  }
+
+  .time {
+    top: -70px;
+    left: 40px;
+  }
+  .time h1 {
+    font-size: 20px;
+  }
+
+  .footer_text {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

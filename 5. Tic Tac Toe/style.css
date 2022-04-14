@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #4c43d4;
+  font-family: "Spartan", sans-serif;
+}
+
+.backGround {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+.restart {
+  font-family: "Spartan", sans-serif;
+  width: 200px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 100px;
+  border-style: none;
+  margin-top: 15px;
+}
+.restart:hover {
+  cursor: pointer;
+}
+
+.button {
+  background: none;
+  font-family: "Spartan", sans-serif;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.ticGround {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+.ticGround h1 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.ticGround p {
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+}
+.ticGround .eachRow {
+  display: flex;
+  height: 100px;
+  width: 300px;
+}
+.ticGround .eachRow .button {
+  width: 100px;
+  height: 100px;
+  font-size: 10px;
+  border-style: none;
+  border-right: 2px white solid;
+  border-bottom: 2px white solid;
+}
+.ticGround .eachRow .button:last-child {
+  border-right: none;
+}
+.ticGround .eachRow:last-child .button {
+  border-bottom: none;
+}
+
+.win {
+  font-weight: 700 !important;
+  text-shadow: 1px 1px;
+  transition: all 1s;
+}
+
+.top_left {
+  width: 150px;
+  height: 150px;
+  background-color: #ffc72a;
+  position: fixed;
+  top: -75px;
+  left: -75px;
+  border-radius: 500px;
+  z-index: -1;
+}
+
+.bottom_right {
+  width: 150px;
+  height: 150px;
+  background-color: #12e177;
+  position: fixed;
+  right: -75px;
+  bottom: -75px;
+  border-radius: 500px;
+  z-index: -1;
+}
+
+.animate {
+  font-size: 40px !important;
+  transition: all 0.5s;
+}
+
+/*# sourceMappingURL=style.css.map */
